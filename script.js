@@ -16,7 +16,8 @@
 //   const finalArray = evenArray.concat(oddArray);
 //   console.log(finalArray);
 // }
-// arrayOfIntegers([5, 7, 9, 6, 2, 15, 17]);
+// arrayOfIntegers([5, 3, 9, 2, 7]);
+// arrayOfIntegers([10, -5, 0, 15, 20]);
 
 //2.Write a function to find the missing number in an array of integers from 1 to N
 
@@ -39,7 +40,8 @@
 
 //   console.log(missingNumber);
 // }
-// findMissingNumber([5, 7, 8, 9]);
+// findMissingNumber([1, 2, 4, 5]);
+// findMissingNumber([10, 7, 3, 5, 8, 1, 4, 6, 2]);
 
 //3.Given a string with parentheses, check if it is balanced (each opening parenthesis has a corresponding closing parenthesis).
 
@@ -63,29 +65,21 @@
 
 //4. Implement a function to convert a decimal number to its binary representation
 
-// function frequentRunnerConversion(decimalValue) {
-//   const firstBinaryValue = decimalValue % 2;
-//   const divident = decimalValue / 2;
-//   const dividentArr = [];
-//   dividentArr.push(divident);
-//   const numbers = [];
-//   numbers.push(firstBinaryValue);
-
-//   for (let i = 0; i < dividentArr.length; i++) {
-//     const dividentElement = dividentArr[i];
-
-//     if (!dividentElement == 0 && !dividentElement == 1) {
-//       firstBinaryValue = decimalValue % 2;
-//       divident = decimalValue / 2;
-//       dividentArr.push(divident[i]);
-//       numbers.push(firstBinaryValue);
-//       console.log(numbers);
-//     } else {
-//       console.log(numbers);
-//     }
+// function decimalToBinary(decimalNumber) {
+//   if (decimalNumber === 0) {
+//     return "0";
 //   }
+//   let binary = "";
+//   let quotient = decimalNumber;
+//   while (quotient > 0) {
+//     const remainder = quotient % 2;
+//     binary = remainder + binary;
+//     quotient = Math.floor(quotient / 2);
+//   }
+//   console.log(binary);
 // }
-// frequentRunnerConversion(15815);
+// decimalToBinary(10);
+// decimalToBinary(25);
 
 //5. Implement a function that returns the longest word in a sentence
 
@@ -102,6 +96,7 @@
 //   console.log(stringModify);
 // }
 // findLongestWord("i love programming");
+// findLongestWord("JavaScript is Awesome");
 
 //6.Given a matrix (2D array), rotate it 90 degrees clockwise
 
@@ -150,6 +145,7 @@
 //   }
 //   console.log(`true`);
 // }
+// checkStringRepeat("hello");
 // checkStringRepeat("world");
 
 //8.Given an array of integers and a target sum, find the index of two numbers that add up to the target sum.
@@ -164,8 +160,10 @@
 //   }
 //   return null;
 // }
-// const nums = [2, 7, 11, 3, 15];
-// const targetSum = 18;
+// // const nums = [2, 7, 11, 15];
+// // const targetSum = 9;
+// const nums = [3, 2, 4];
+// const targetSum = 6;
 // const result = findTwoSum(nums, targetSum);
 // if (result) {
 //   const [index1, index2] = result;
